@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://inntal-ki.com/schemas/dsgvo-ki-checkliste.json",
+  "title": "DSGVO-KI-Checkliste Self-Assessment",
+  "description": "Maschinenlesbares Schema fuer die Erfassung eines DSGVO-KI-Self-Assessments.",
+  "type": "object",
+  "required": ["meta", "sections"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["unternehmen", "vorhaben", "datum"],
+      "properties": {
+        "unternehmen": { "type": "string" },
+        "vorhaben": { "type": "string" },
+        "datum": { "type": "string", "format": "date" },
+        "bearbeiter": { "type": "string" },
+        "checklisten_version": { "type": "string", "default": "1.0.0" }
+      }
+    },
+    "sections": {
+      "type": "object",
+      "properties": {
+        "datenfluesse": { "$ref": "#/$defs/section" },
+        "rechtsgrundlage": { "$ref": "#/$defs/section" },
+        "ai_act": { "$ref": "#/$defs/section" },
+        "technik": { "$ref": "#/$defs/section" },
+        "organisation": { "$ref": "#/$defs/section" },
+        "wirtschaftlichkeit": { "$ref": "#/$defs/section" }
+      }
+    },
+    "gesamturteil": {
+      "type": "string",
+      "enum": ["freigegeben", "freigegeben_mit_auflagen", "nachbesserung", "gestoppt"]
+    },
+    "kommentar": { "type": "string" }
+  },
+  "$defs": {
+    "section": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "status"],
+            "properties": {
+              "id": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+$" },
+              "status": { "type": "string", "enum": ["offen", "erledigt", "nicht_zutreffend"] },
+              "antwort": { "type": "string" },
+              "belegt_durch": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}
