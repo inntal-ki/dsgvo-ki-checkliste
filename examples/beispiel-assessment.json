@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "unternehmen": "Musterfirma GmbH (fiktives Beispiel)",
+    "vorhaben": "Interner Schreibassistent für Angebote, lokal betrieben; Cloud-Assistent nur für Marketingtexte",
+    "datum": "2026-10-18",
+    "bearbeiter": "IT-Leitung",
+    "checklisten_version": "1.1.0"
+  },
+  "sections": {
+    "datenfluesse": {
+      "items": [
+        { "id": "1.1", "status": "erledigt", "antwort": "Kundendaten (Namen, Ansprechpartner) in Angebotsentwürfen" },
+        { "id": "1.2", "status": "erledigt", "antwort": "Lokal auf eigenem Server; Marketing-Assistent bei EU-Cloud-Anbieter" },
+        { "id": "1.3", "status": "offen", "antwort": "Löschfrist für den Chatverlauf noch festzulegen" },
+        { "id": "1.4", "status": "erledigt", "antwort": "Offenes Modell auf eigener Hardware, Telemetrie der Oberfläche abgeschaltet" }
+      ]
+    },
+    "ai_act": {
+      "items": [
+        { "id": "3.1", "status": "erledigt", "antwort": "Minimales Risiko (interner Einsatz)" },
+        { "id": "3.3", "status": "erledigt", "antwort": "Betreiber" }
+      ]
+    },
+    "organisation": {
+      "items": [
+        { "id": "5.1", "status": "offen", "antwort": "Schulung für November geplant", "belegt_durch": "Schulungsplan" }
+      ]
+    },
+    "cloud": {
+      "items": [
+        { "id": "7.2", "status": "erledigt", "antwort": "Eigener, beschrifteter Assistent nur für die Marketing-Gruppe; kein automatischer Rückfall" },
+        { "id": "7.4", "status": "offen", "antwort": "Zero Data Retention beim Anbieter angefragt" }
+      ]
+    }
+  },
+  "gesamturteil": "freigegeben_mit_auflagen",
+  "kommentar": "Start nach Klärung von 1.3, 5.1 und 7.4."
+}

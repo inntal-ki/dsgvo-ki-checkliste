@@ -35,4 +35,4 @@ die Bewertung macht der Anwalt bzw. Datenschutzbeauftragte.
 
 ## Rückfragen
 
-Issue öffnen oder an [kontakt@inntal-ki.com](mailto:kontakt@inntal-ki.com).
+Issue öffnen oder an [kontakt@inntal-ki.eu](mailto:kontakt@inntal-ki.eu).

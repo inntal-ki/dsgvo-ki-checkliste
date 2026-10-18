@@ -1,0 +1,30 @@
+name: Schema
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install "jsonschema>=4.18"
+      - name: Schema gültig, Beispiel passt
+        run: |
+          python - <<'PY'
+          import json, jsonschema
+          schema = json.load(open("schema.json", encoding="utf-8"))
+          jsonschema.Draft202012Validator.check_schema(schema)
+          validator = jsonschema.Draft202012Validator(schema)
+          example = json.load(open("examples/beispiel-assessment.json", encoding="utf-8"))
+          validator.validate(example)
+          # Gegenprobe: ein ungültiger Wert muss auffallen
+          bad = dict(example, gesamturteil="vielleicht")
+          assert list(validator.iter_errors(bad)), "Schema lässt ungültiges Gesamturteil durch"
+          print("ok")
+          PY

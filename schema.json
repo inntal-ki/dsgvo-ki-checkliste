@@ -1,8 +1,8 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://inntal-ki.com/schemas/dsgvo-ki-checkliste.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/inntal-ki/dsgvo-ki-checkliste/main/schema.json",
   "title": "DSGVO-KI-Checkliste Self-Assessment",
-  "description": "Maschinenlesbares Schema fuer die Erfassung eines DSGVO-KI-Self-Assessments.",
+  "description": "Maschinenlesbares Schema für die Erfassung eines DSGVO-KI-Self-Assessments. Passt zu CHECKLIST.md Version 1.1.0.",
   "type": "object",
   "required": ["meta", "sections"],
   "properties": {
@@ -14,7 +14,7 @@
         "vorhaben": { "type": "string" },
         "datum": { "type": "string", "format": "date" },
         "bearbeiter": { "type": "string" },
-        "checklisten_version": { "type": "string", "default": "1.0.0" }
+        "checklisten_version": { "type": "string", "default": "1.1.0" }
       }
     },
     "sections": {
@@ -25,7 +25,8 @@
         "ai_act": { "$ref": "#/$defs/section" },
         "technik": { "$ref": "#/$defs/section" },
         "organisation": { "$ref": "#/$defs/section" },
-        "wirtschaftlichkeit": { "$ref": "#/$defs/section" }
+        "wirtschaftlichkeit": { "$ref": "#/$defs/section" },
+        "cloud": { "$ref": "#/$defs/section" }
       }
     },
     "gesamturteil": {

@@ -2,6 +2,10 @@
 
 **Self-Assessment für die Einführung von KI-Systemen in KMU — nach DSGVO und EU AI Act.**
 
+[![Schema](https://github.com/inntal-ki/dsgvo-ki-checkliste/actions/workflows/validate.yml/badge.svg)](https://github.com/inntal-ki/dsgvo-ki-checkliste/actions/workflows/validate.yml)
+
+**Stand:** Oktober 2026 · Version 1.1.0 · Rechtsstand geprüft am 18.10.2026 (inkl. „Digital Omnibus on AI“, VO 2026/1744)
+
 Eine strukturierte Checkliste, mit der Sie vor der Einführung eines KI-Systems
 (lokal oder Cloud) die wichtigsten rechtlichen und organisatorischen Fragen
 durchgehen. Ohne Beratungsjargon, ohne Produktempfehlung.
@@ -17,6 +21,8 @@ durchgehen. Ohne Beratungsjargon, ohne Produktempfehlung.
 - [`CHECKLIST.md`](CHECKLIST.md) — Die eigentliche Checkliste (Markdown)
 - [`schema.json`](schema.json) — Maschinenlesbares Schema für Self-Assessment-Tools
 - [`glossar.md`](glossar.md) — Begriffe kurz erklärt
+- [`examples/beispiel-assessment.json`](examples/beispiel-assessment.json) — ausgefülltes Beispiel (fiktive Firma)
+- [`CHANGELOG.md`](CHANGELOG.md) — was sich wann geändert hat
 
 ## Nutzung
 
@@ -28,8 +34,9 @@ Ihr konkretes Vorhaben. Jeder Punkt hat eine kurze Erklärung, warum er zählt.
 ### Maschinell auswerten
 
 Das Schema in [`schema.json`](schema.json) eignet sich, um die Antworten in
-einem Formular oder einer kleinen Web-App zu erfassen. Siehe
-[`examples/`](examples/) für ein minimales Beispiel.
+einem Formular oder einer kleinen Web-App zu erfassen. Ein ausgefülltes Beispiel
+steht in [`examples/beispiel-assessment.json`](examples/beispiel-assessment.json);
+bei jeder Änderung prüft eine GitHub Action Schema und Beispiel.
 
 ## Haftungsausschluss
 
@@ -49,5 +56,5 @@ willkommen. Siehe [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ---
 
-Teil der [inntal-ki](https://github.com/inntal-ki) Open-Source-Familie ·
-[inntal-ki.com](https://inntal-ki.com)
+Teil der [inntal-ki](https://github.com/inntal-ki) Open-Source-Familie — ein
+persönliches, nicht kommerzielles Projekt · [inntal-ki.eu](https://inntal-ki.eu)
